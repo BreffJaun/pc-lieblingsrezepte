@@ -7,7 +7,7 @@ import morgan from 'morgan';
 
 // I M P O R T:  R O U T E S
 import recipesRouter from './routes/recipes.js'; // i.e
-// import wrongRoutes from './routes/wrongPath.js'
+import wrongRoutes from './routes/wrongPath.js'
 
 
 // I M P O R T:  E R R O R  H A N D L E R
@@ -16,7 +16,7 @@ import { errorHandler } from './middleware/errorhandler.js';
 // C O N N E C T   W I T H   M O N G O O S E  D B
 mongoose.set("strictQuery", false); // to prevent an erroneous error message
 mongoose.set("strictQuery", false);
-const DB_CONNECTION_STRING =  process.env.MONGO_DB_CONNECTION_STRING || "mongodb://localhost:27017"
+const DB_CONNECTION_STRING =  process.env.MONGO_DB_CONNECTION_STRING || "mongodb://localhost:27017/pc-favorite-recipes"
 const PORT = process.env.PORT || 4000
 mongoose.connect(DB_CONNECTION_STRING)
 .then(() => console.log('Connect with MongoDB: SUCCESS ✅'))
@@ -45,11 +45,11 @@ app.use('/recipes', recipesRouter);
 app.use(errorHandler);
 
 // WRONG PATH HANDLER
-// app.use('*', wrongRoutes);
+app.use('*', wrongRoutes);
 
 // S E R V E R - S T A R T
-app.listen(process.env.PORT, () => {
-  console.log('Server runs on Port: ' + process.env.PORT);
+app.listen(PORT, () => {
+  console.log('Server runs on Port: ' + PORT);
 });
 
 
