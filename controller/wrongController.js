@@ -2,20 +2,20 @@
 
 // For Wrong Paths
 const wrongGetController = (req, res) => {
-  res.status(404).send(`Unknown path ${req.url}! Please check your path!`);
+  res.status(404).send(`Unknown GET path ${req.url}! Please check your path!`);
 };
 
 const wrongPutController = (req, res) => {
-  res.status(404).send(`Unknown path ${req.url}! Please check your path!`);
+  res.status(404).send(`Unknown PUT path ${req.url}! Please check your path!`);
 };
 
 const wrongPostController = (req, res) => {
-  res.status(404).send(`Unknown path ${req.url}! Please check your path!`);
+  res.status(404).send(`Unknown POST path ${req.url}! Please check your path!`);
 };
 
 const wrongDeleteController = (req, res) => {
   res.status(404).send(`
-  Unknown path ${req.url}! Please check your path!`);
+  Unknown DELETE path ${req.url}! Please check your path!`);
 }
 
 export {
