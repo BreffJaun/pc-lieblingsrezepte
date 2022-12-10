@@ -15,7 +15,6 @@ export async function recipesGetAll (req, res, next) {
   }
 }
 
-
 // GET the newest recipes
 export async function recipesGetNew (req, res, next) {
   try {
@@ -25,7 +24,6 @@ export async function recipesGetNew (req, res, next) {
     next(err);
   }
 }
-
 
 // GET a specific recipe
 export async function recipesGetOne(req, res, next) {

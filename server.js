@@ -7,7 +7,7 @@ import morgan from 'morgan';
 
 // I M P O R T:  R O U T E S
 import recipesRouter from './routes/recipes.js'; // i.e
-import wrongRoutes from './routes/wrongPath.js'
+// import wrongRoutes from './routes/wrongPath.js'
 
 
 // I M P O R T:  E R R O R  H A N D L E R
@@ -44,7 +44,7 @@ app.use('/recipes', recipesRouter);
 app.use(errorHandler);
 
 // WRONG PATH HANDLER
-app.use('*', wrongRoutes);
+// app.use('*', wrongRoutes);
 
 // S E R V E R - S T A R T
 app.listen(process.env.PORT, () => {
