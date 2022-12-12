@@ -16,18 +16,15 @@ export const recipesValidator = [
   body("description")
     .notEmpty()
     .withMessage("Description has to be set!")
-    .trim()
-    .isLength({max:250}),
+    .trim(),
   body("ingredients")
     .notEmpty()
     .withMessage("Ingredients has to bet set!")
-    .trim()
-    .isLength({max:250}),
+    .trim(),
   body("preparation")
     .notEmpty()
     .withMessage("Preparation has to bet set!")
     .trim()
-    .isLength({max:250})
 ]
 
 // normalize() macht alles lowerCase
